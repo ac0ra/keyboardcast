@@ -106,7 +106,7 @@ spawn_command( const char *cmd, const char *args )
   for( i = 0; argv[i]; i++ )
   {
     char *command;
-    command = g_strdup_printf( "gnome-terminal --window-with-profile=keyboardcast -t 'Keyboardcast Spawn' -e '%s %s'&", cmd, argv[i] );
+    command = g_strdup_printf( "urxvt -e '%s %s'&", cmd, argv[i] );
     system( command );
     g_free( command );
   }
