@@ -7,6 +7,7 @@ PKGS = gtk+-2.0 libwnck-1.0 libglade-2.0
 CFLAGS = `pkg-config --cflags $(PKGS)`
 LDLIBS = `pkg-config --libs $(PKGS)`
 LDLIBS += -lXmu
+LDLIBS += -lX11
 CFLAGS += -Wall -O2 -DPREFIX=\"$(PREFIX)\"
 
 keyboardcast: keyboardcast.o window-list.o grab-window.o
