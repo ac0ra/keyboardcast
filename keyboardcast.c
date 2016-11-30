@@ -196,7 +196,7 @@ terminal_toggled( GtkToggleButton *button )
   const char *process;
 
   if( gtk_toggle_button_get_active( button ) )
-    process = "gnome-terminal";
+    process = "urxvt";
   else
     process = NULL;
 
@@ -256,7 +256,7 @@ setup_interface( void )
 
   update_label( NULL, GTK_LABEL( spawn_label ) );
 
-  window_list_filter_by_process( wl, "gnome-terminal" );
+  window_list_filter_by_process( wl, "urxvt" );
 
   gtk_widget_show_all( window );
 
